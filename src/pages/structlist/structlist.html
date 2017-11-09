@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        CentraliZr
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let struct of list">
+            <h3>{{struct?.name}}</h3>
+            <p>{{struct?.description}}</p>
+            <button ion-button (click)="getStruct(struct)">Access</button>
+        </ion-item>
+    </ion-list>
+    <button ion-button>Get specific struct (TODO)</button>
+</ion-content>

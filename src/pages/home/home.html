@@ -1,14 +1,16 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      CentraliZr
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <h2>Login</h2>
+    <ion-label>User</ion-label>
+    <ion-input [(ngModel)]="user"></ion-input>
+    <ion-label>User</ion-label>
+    <ion-input [(ngModel)]="pw"></ion-input>
+    <button ion-button full (click)="send()">Login</button>
 </ion-content>
