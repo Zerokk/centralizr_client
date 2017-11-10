@@ -13,7 +13,7 @@ export class StructList {
   CENTRALIZR_URL = "https://localhost:3443"
   list;
 
-  constructor(private navCtrl: NavController, private http: HttpClient, private navParams: NavParams) {
+  constructor(private navCtrl: NavController, private http: HttpClient, private navParams: NavParams, public loadCtrl:LoadingController) {
     this.list = this.navParams.get("list");
   }
 
@@ -22,7 +22,13 @@ export class StructList {
         .append("key", struct.key)
         .append("origin", "ionic");
 
+        let loading = this.loadCtrl.create({
+          content: 'Fetching data...'
+        });
+        loading.present();
+        
     this.http.get(this.CENTRALIZR_URL+"/getstruct", {params: params}).subscribe( (res:any) => {   // RESOLVER
+        loading.dismiss();
         if(res.err){
             console.log("ERROR: ", res.err);
         }

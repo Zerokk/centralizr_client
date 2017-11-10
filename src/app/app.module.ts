@@ -12,13 +12,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { StructList } from '../pages/structlist/structlist'
 import { StructPage } from '../pages/structpage/structpage';
+import { StructController } from '../pages/structpage/structcontroller';
  
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     StructList,
-    StructPage
+    StructPage,
+    StructController
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { StructPage } from '../pages/structpage/structpage';
     MyApp,
     HomePage,
     StructList,
-    StructPage
+    StructPage,
+    StructController
   ],
   providers: [
     StatusBar,

@@ -33,7 +33,7 @@ export class HomePage {
            this.navCtrl.push(StructList, {list: list});
         }).catch( err => console.log("ERROR: ", err));
      }
-    })
+    });
   }
 
   fetchStructList(key){
@@ -50,7 +50,7 @@ export class HomePage {
           }else{
             reject(res);
           }
-        })
+        });
 
     });
   }

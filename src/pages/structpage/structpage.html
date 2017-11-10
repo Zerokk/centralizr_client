@@ -6,8 +6,9 @@
     </ion-navbar>
   </ion-header>
 <ion-content>
-    <p>
-    TODO
-    Struct received: {{struct.name}}
-    </p>
+    <struct-controller 
+        [name]="struct.name" 
+        [description]="struct.description" 
+        [datasets]="struct.datasets"
+        (event)="sendResult($event)"></struct-controller>
 </ion-content>
